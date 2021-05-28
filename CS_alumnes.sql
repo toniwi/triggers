@@ -51,8 +51,8 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `alumnes_AI` AFTER INSERT ON `alumne` FOR EACH ROW INSERT INTO ins_alumne(i_codi,i_name,i_email,i_phone)
-VALUES (new.codi,new.dni,new.email,new.phone) */;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `alumne_ai` AFTER INSERT ON `alumne` FOR EACH ROW INSERT INTO ins_alumne(i_codi,i_name,i_email,i_phone)
+VALUES (new.codi,new.name,new.email,new.phone) */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
@@ -125,7 +125,7 @@ CREATE TABLE `ins_alumne` (
 
 LOCK TABLES `ins_alumne` WRITE;
 /*!40000 ALTER TABLE `ins_alumne` DISABLE KEYS */;
-INSERT INTO `ins_alumne` VALUES ('0006','66666666F','vicent@gmail.com','616616616');
+INSERT INTO `ins_alumne` VALUES ('0006','Vicent Calderon','vicent@gmail.com','616616616');
 /*!40000 ALTER TABLE `ins_alumne` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-28 15:09:02
+-- Dump completed on 2021-05-28 16:36:15
